@@ -1,0 +1,230 @@
+.banner {
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+/* prev  next */
+.banner>span {
+  height: 80px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(150, 150, 150, 0.3);
+}
+.banner>span>i {
+  font-size: 40px;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.banner>span:hover {
+  background-color: rgba(150, 150, 150, 0.8);
+}
+.banner>span:hover>i {
+  color: #fff;
+}
+.banner>span.prev {
+  left: 5%;
+}
+.banner>span.next {
+  right: 5%;
+}
+.banner>div {
+  margin: 0 auto;
+  height: 506px;
+  white-space: nowrap;
+  transition: all 0.5s;
+  position: relative;
+  left: 0;
+}
+/* 动态渲染的轮播图 */
+.banner>div>span {
+  display: inline-block;
+  transform: translateX(-100%);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* main */
+.main {}
+/* 超值团购 */
+.main>.main-valuable {
+  font-size: 0;
+}
+.main>.main-love>.love-font,
+.main>.main-valuable>.valuable-font {
+  padding-top: 20px;
+  text-align: center;
+}
+.main>.main-love>.love-font>hr,
+.main>.main-valuable>.valuable-font>hr {
+  width: 30%;
+  border-width: 2px;
+  display: inline-block;
+  margin-top: 18px;
+}
+.main>.main-love>.love-font>hr:first-child,
+.main>.main-valuable>.valuable-font>hr:first-child {
+  float: left;
+}
+.main>.main-love>.love-font>hr:last-child,
+.main>.main-valuable>.valuable-font>hr:last-child {
+  float: right;
+}
+.main>.main-love>.love-font>h3,
+.main>.main-valuable>.valuable-font>h3 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+}
+.main>.main-love>.love-font>i,
+.main>.main-valuable>.valuable-font>i {
+  font-size: 30px;
+  font-weight: 600;
+  padding-right: 10px;
+  color: #ff6773;
+}
+.main>.main-love>.love-font>span,
+.main>.main-valuable>.valuable-font>span {
+  font-size: 16px;
+  padding-left: 10px;
+  color: #999;
+}
+.main>.main-valuable>.valuable-product {
+  margin-top: 25px;
+}
+.main>.main-valuable>.valuable-product>a {
+  float: left;
+  width: 307px;
+}
+.main>.main-valuable>.valuable-product>a:hover>img {
+  /* transform: translateY(-3px); */  /* 会影响高光效果 */
+  box-shadow: 0 3px 5px 0 #aaa;
+}
+.main>.main-valuable>.valuable-product>a>img {
+  width: 100%;
+  transition: all 0.2s ease-out;
+  /* transform: translateY(0); */
+}
+.main>.main-valuable>.valuable-product>ul {
+  font-size: 0;
+  overflow: hidden;
+}
+.main>.main-valuable>.valuable-product>ul>li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 33.333333%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.main>.main-valuable>.valuable-product>ul>li>a {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.main>.main-valuable>.valuable-product>ul>li>a::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transform: skewX(-80deg);
+  box-shadow: 0 0 10px 50px #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.main>.main-valuable>.valuable-product>ul>li>a:hover::before {
+  top: 100%;
+  transition: all 0.5s;
+}
+.main>.main-valuable>.valuable-product>ul>li>a>img {
+  width: 100%;
+}
+
+
+/* 猜你喜欢 */
+.main>.main-love>.love-product {
+  margin-top: 25px;
+}
+.main>.main-love>.love-product>ul {
+  font-size: 0;
+  margin-right: -10px;
+}
+.main>.main-love>.love-product>ul>li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20%;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.main>.main-love>.love-product>ul>li>div {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.main>.main-love>.love-product>ul>li>div:hover {
+  box-shadow: 0 0 5px 0 #ccc;
+}
+.main>.main-love>.love-product>ul>li>div>img {
+  width: 100%;
+  cursor: pointer;
+}
+.main>.main-love>.love-product>ul>li>div>a {
+  display: block;
+  width: 90%;
+  padding-left: 10px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+}
+.main>.main-love>.love-product>ul>li>div>a:hover {
+  text-decoration: underline;
+}
+.main>.main-love>.love-product>ul>li>div>div {
+  line-height: 14px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.main>.main-love>.love-product>ul>li>div>div>span {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 18px;
+  margin-top: 4px;
+  color: #ff6f6f;
+}
+.main>.main-love>.love-product>ul>li>div>div>a {
+  padding: 3px 8px;
+  margin-right: 20px;
+  font-size: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  color: #666;
+  float: right;
+}
+.main>.main-love>.love-product>ul>li>div>div>a:hover {
+  border-color: #ff6f6f;
+  color: #ff6f6f;
+}
+.main>.main-love>.love-product>ul>li>div>div>a>i {
+  display: inline-block;
+  font-size: 12px;
+  padding-right: 3px;
+}
+
+
+
+
+
+
+
+
+
+

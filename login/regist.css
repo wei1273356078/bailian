@@ -1,0 +1,136 @@
+body {
+  background-color: #f9f9f8;
+}
+
+
+/* header */
+header.header {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+header.header>a {}
+header.header>a>img {}
+header.header>img {
+  padding-left: 20px;
+}
+
+
+/* main */
+main.main {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 1px solid #e1dfda;
+  background-color: #fff;
+}
+main.main>.login {}
+main.main>.login>.login-top {
+  padding: 10px 20px;
+  line-height: 40px;
+  border-bottom: 1px solid #e1dfda;
+}
+main.main>.login>.login-top>span {
+  font-size: 16px;
+  color: #ff002a;
+}
+main.main>.login>.login-top>p {
+  float: right;
+  font-size: 12px;
+  color: #63625d;
+}
+main.main>.login>.login-top>p>a {
+  margin-left: 5px;
+  color: #0088cc;
+}
+main.main>.login>.login-main {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+main.main>.login>.login-main>form {}
+main.main>.login>.login-main>form>div {
+  padding: 10px 0;
+}
+main.main>.login>.login-main>form>div>label {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+main.main>.login>.login-main>form>div>input {
+  text-indent: 2em;
+  width: 302px;
+  height: 36px;
+}
+main.main>.login>.login-main>form>.xieyi>input {
+  height: 12px;
+  width: 12px;
+}
+main.main>.login>.login-main>form>.xieyi>label:last-child {
+  width: 302px;
+}
+main.main>.login>.login-main>form>.btn-login>input {
+  text-indent: 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #e6133c;
+  color: #fff;
+}
+main.main>.login>.login-main>form>.btn-login>input:hover {
+  background-color: #fa2244;
+}
+
+/* 粘性页脚 */
+html {
+  height: 100%;
+}
+body {
+  width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 150px;
+  position: relative;
+}
+
+footer.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 150px;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f8;
+}
+
+/* 页脚 */
+/* footer-bottom */
+.footer-bottom {
+  text-align: center;
+}
+.footer-bottom>a {
+  font-size: 12px;
+  color: #333;
+}
+.footer-bottom>a:hover {
+  color: red;
+}
+.footer-bottom>p {
+  color: #999999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.footer-bottom>img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.footer-bottom>span {
+  font-size: 12px;
+  vertical-align: middle;
+  color: #666;
+}

@@ -1,0 +1,361 @@
+.main {
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 商品左侧图片展示 */
+.goods-left {
+	/* 只管宽，不管高，高度由内容去撑 */
+	width: 480px;
+	display: inline-block;
+}
+.zoom-wrapper {
+	padding-top: 100%;
+	position: relative;
+	margin-bottom: 30px;
+}
+/* 上面的大图片big-img-list-wrapper */
+.big-img-list-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	cursor: crosshair;
+}
+/* 做一个半透明模板 */
+.big-img-list-wrapper:hover::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.6);
+}
+/* 图片中心放大镜移动的小方块 */
+.zoom {
+	box-sizing: border-box;
+	z-index: 5;
+	display: none;
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+	border: 1px solid lightgrey;
+	background-color: #fff;
+}
+.big-img-list-wrapper:hover>.zoom {
+	display: block;
+}
+/* zoom-big 放大镜显示的大框 */
+.zoom-big {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	background-color: white;
+	transition: all 0.4s ease-out;
+	transform: scale(0); /* 缩放成一点 */
+	z-index: 3;
+}
+.big-img-list-wrapper:hover+.zoom-big {
+	transform: scale(1); /* 原始大小 */
+	left: 102%;
+}
+ul.big-img-list {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+ul.big-img-list>li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all 0.4s ease-out;
+}
+ul.big-img-list>li.show {
+	opacity: 1;
+}
+ul.big-img-list>li>.img-wrap {
+	width: 100%;
+	padding-top: 100%; /* 参照父元素的宽度 */
+	position: relative;
+}
+ul.big-img-list>li>.img-wrap>img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	width: 100%;
+	height: 100%;
+}
+
+/* 下面的小图片轮播图 */
+.img-list-wrapper {
+	padding: 0 15px;
+	position: relative;
+	overflow: hidden;
+}
+.img-list-wrapper>span {
+	position: absolute;
+	top: 0;
+	width: 15px;
+	height: 100%;
+	z-index: 5;
+	cursor: pointer;
+}
+.img-list-wrapper>span.prev {
+	left: 0;
+	background:url(../images/detail/brandstore_share.png) no-repeat -32px -362px;
+	background-color: #f2f2f2;
+}
+.img-list-wrapper>span.next {
+	right: 0;
+	background:url(../images/detail/brandstore_share.png) no-repeat -73px -362px;
+	background-color: #f2f2f2;
+}
+.img-list-wrapper>ul.img-list {
+	white-space: nowrap;
+	font-size: 0;
+}
+.img-list-wrapper>ul.img-list>li {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 3px;
+	width: 20%;
+}
+.img-list-wrapper>ul.img-list>li>.img-wrap {
+	padding-top: 100%; /* 参照父元素的宽度 */
+	position: relative;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+.img-list-wrapper>ul.img-list>li>.img-wrap>img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+/* 商品右侧详情信息 */
+.goods-right {
+	display: inline-block;
+	width: 561px;
+	min-height: 615px;
+	overflow: hidden;
+	padding-left: 60px;
+	overflow-x: hidden;
+}
+.goods-right>.wrapper {
+	margin-top: 20px;
+	height: 596px;
+	font-size: 12px;
+	color: #000;
+}
+.goods-right>.wrapper>.title, .price-wrapper,.number{
+	border-bottom: 1px dotted gainsboro;
+}
+.goods-right>.wrapper h5{
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 30px;
+	font-weight: 800;
+}
+.goods-right>.wrapper>.title>span {
+	line-height: 30px;
+}
+.price-wrapper {
+	padding: 18px 0 18px;
+	vertical-align: middle;
+}
+.price-wrapper>span.price {
+	color: #ec595c;
+	font-size: 28px;
+	line-height: 34px;
+}
+.price-wrapper>span.red-cart {
+	display: inline-block;
+	text-align: center;
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #fff;
+	background: #ec595c;
+	border-radius: 10px;
+	margin-left: 10px;
+}
+.number {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+.number input {
+	outline: none;
+	border: none;
+}
+.number span {
+	width: 80px;
+	padding-left: 13px;
+	color: black;
+	font-size: 13px;
+}
+.number>input[type=button] {
+	width: 22px;
+	height: 22px;
+	background-color: #c8a985;
+}
+.number>input[type=text] {
+	width: 42px;
+	height: 20px;
+	line-height: 19px;
+	font-weight: bold;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align: center;
+	border: 1px solid grey;
+}
+.hint {
+	height: 178px;
+	line-height: 28px;
+	margin-top: 17px;
+}
+.hint dl {
+	color: #999;
+	font-size: 12px;
+}
+.hint dl dt {
+	padding-left: 13px;
+	width: 80px;
+	float: left;
+}
+.hint dl dd {
+	float: left;
+	width: 422px;
+}
+.hint a {
+	color: #c8a985;
+	text-decoration: underline;
+}
+.buy {
+	margin-top: 23px;
+	width: 100%;
+}
+.buy_btn,.add_car_btn {
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	margin-left: 10px;
+}
+.buy_btn span {
+	display: inline-block;
+	font-size: 14px;
+	color: #ec595c;
+	line-height: 33px;
+	height: 33px;
+	width: 118px;
+	border: 1px solid #ec595c;
+	text-align: center;
+	background-color: #fff8f9;
+}
+.buy_btn span:hover {
+	background-color: #fff;
+}
+.add_car_btn {
+	position: relative;
+}
+.add_car_btn  span{
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	cursor: pointer;
+	padding: 0px 28px 0px 28px;
+	background: #ec595c;
+}
+.add_car_btn  span:hover {
+	background-color: #ec7274;
+}
+.new-right-content {
+    padding-top: 82px;
+    height: 48px;
+    font-size: 0;
+}
+.new-right-content .new-right-content-list {
+    float: left;
+    height: 48px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.new-right-content .new-right-content-list i {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    margin-right: 16px;
+}
+.new-right-content .new-right-content-list .new-right-content-text {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    height: 48px;
+    line-height: 48px;
+}
+.new-right-content .new-right-content-list i, .new-right-content .new-right-content-list p {
+    float: left;
+}
+.zhp {
+    background-image: url(../images/detail/guaranteed_warranty.png);
+}
+.bs {
+    background-image: url(../images/detail/faith_enterprise.png);
+}
+.wyshb {
+    background-image: url(../images/detail/guarantee.png);
+}
+
+
+
+/* 详情选项卡 */
+.main>.tab-wrapper {
+	border: 1px solid #999;
+	margin-top: 30px;
+}
+.main>.tab-wrapper>ul.tab-top {
+	font-size: 0;
+	background-color: #eaeaea;
+}
+.main>.tab-wrapper>ul.tab-top>li {
+	display: inline-block;
+	width: 160px;	
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+	color: #666;
+}
+.main>.tab-wrapper>ul.tab-top>li.show {
+	background-color: #fff;
+	border-bottom-color: #fff;
+}
+.main>.tab-wrapper>ul.tab-bottom {}
+.main>.tab-wrapper>ul.tab-bottom>li {
+	display: none;
+}
+.main>.tab-wrapper>ul.tab-bottom>li.show {
+	display: block;
+}

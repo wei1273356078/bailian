@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../home/font/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="./cart.css">
+    <title>购物车</title>
+  </head>
+  <body>
+
+
+    <!-- 顶部 -->
+    <header class="tonglan header">
+      <!-- header-top -->
+      <div class="tonglan header-top">
+        <div class="w">
+          <div class="header-top-left">
+            <img src="../images/home/logo.png" />
+            <h4>百联集团旗下全渠道电商平台</h4>
+            <ul>
+              <li>
+                <a href="#">网站导航<i class="iconfont icon-arrowdown"></i></a>
+                <ul>
+                  <li><a href="#">百联集团官网</a></li>
+                  <li><a href="#">第一医药</a></li>
+                  <li><a href="#">支付宝网</a></li>
+                  <li><a href="#">OK会员卡专区</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="#">消息</a>
+          </div>
+          <div class="header-top-right">
+            <ul>
+              <li class="login">
+                <div class="show regist">
+                  <a href="#"><span class="iconfont icon-denglu"></span>请登录</a>
+                  <a href="../login/regist.html">注册</a>
+                </div>
+                <div class="user"><a href="../profile/profile.html"></a></div>
+              </li>
+              <li><a class="a-order" href="javascript: void(0);">我的订单</a></li>
+              <!-- bl -->
+              <li>
+                <a href="#">我的百联<i class="iconfont icon-arrowdown"></i></a>
+                <b></b>
+                <dl class="bl">
+                  <dd><a href="#">我的订单</a></dd>
+                  <dd><a href="#">我的评价</a></dd>
+                  <dd><a href="#">我的积分</a></dd>
+                  <dd><a href="#">我的收藏</a></dd>
+                  <dd><a href="#">我的优惠券</a></dd>
+                </dl>
+              </li>
+              <!-- jiaofei -->
+              <li>
+                <a href="#">充值缴费<i class="iconfont icon-arrowdown"></i></a>
+                <b></b>
+                <dl class="jiaofei">
+                  <dd>
+                    <h4>水电煤缴费</h4>
+                    <dl>
+                      <dd><a href="#">缴费首页</a></dd>
+                      <dd><a href="#">水费缴费</a></dd>
+                      <dd><a href="#">电费缴费</a></dd>
+                      <dd><a href="#">燃气缴费</a></dd>
+                    </dl>
+                  </dd>
+                  <dd>
+                    <h4>手机充值</h4>
+                    <dl>
+                      <dd><a href="#">手机充值</a></dd>
+                      <dd><a href="#">座机充值</a></dd>
+                    </dl>
+                  </dd>
+                  <dd>
+                    <h4>其它缴费</h4>
+                    <dl>
+                      <dd><a href="#">宽带充值</a></dd>
+                      <dd><a href="#">铁通缴费</a></dd>
+                      <dd><a href="#">有线电视缴费</a></dd>
+                    </dl>
+                  </dd>
+                  <dd>
+                    <h4>游戏点卡</h4>
+                    <dl>
+                      <dd><a href="#">腾讯Q币充值</a></dd>
+                      <dd><a href="#">盛大点券充值</a></dd>
+                      <dd><a href="#">更多游戏</a></dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </li>
+              <li><a href="#">购物车</a></li>
+              <li><a href="../profile/profile.html">个人中心</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- main -->
+    <main class="main">
+      <!-- main-top -->
+      <div class="tonglan main-top">
+        <div class="w main-top-img">
+          <a href="../home/index.html">
+            <img src="../images/home/header-logo.png" />
+          </a>
+          <span>购物车</span>
+        </div>
+      </div>
+      <!-- main-middle -->
+      <div class="w main-middle">
+        <!-- main-middle-all -->
+        <div class="main-middle-all">
+          <div class="all-count-product">
+            <h3>全部商品</h3>
+            <span class="all-count">0</span>
+          </div>
+        </div>
+        <!-- main-middle-product -->
+        <div class="main-middle-product">
+          <!-- product-empty -->
+          <div class="product-empty">
+            <img src="../images/home/clearcart.png" />
+            <div class="product-empty-font">
+              <h3>购物车快饿扁了/(ㄒoㄒ)/~~</h3>
+              <h4>快去 <a href="../home/index.html">i百联首页</a> 为我填饱肚子吧~~</h4>
+            </div>
+          </div>
+          <!-- product-info -->
+          <div class="product-info">
+            <!-- product-list -->
+            <table class="product-list">
+              <thead>
+                <tr>
+                  <th><i class="checkbox checked all"></i><span>全选</span></th>
+                  <th>商品信息</th>
+                  <th>单价（元）</th>
+                  <th>件数</th>
+                  <th>金额（元）</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <!-- main-bottom -->
+            <div class="w main-bottom">
+              <div class="main-bottom-left">
+                <a href="javascript: void(0);" class="delete-product">删除所有商品</a>
+                <a href="javascript: void(0);">清除失效物品</a>
+                <a href="javascript: void(0);">移入收藏夹</a>
+              </div>
+              <div class="main-bottom-center">
+                已选择<span class="count"></span>件商品
+              </div>
+              <div class="main-bottom-right">
+                合计：<b>￥</b><span class="total"></span>
+                <button class="settle">去结算</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+
+
+    <!-- 页脚 -->
+    <footer class="tonglan footer">
+      <!-- footer-help -->
+      <div class="w footer-help">
+        <ul>
+          <li>
+            <span class="help-img"></span>
+            <div class="help-font">
+              <h4>新手入门</h4>
+              <a href="#">购物流程</a>
+              <a href="#">会员介绍</a>
+              <a href="#">常见问题</a>
+              <a href="#">发票说明</a>
+              <a href="#">联系客服</a>
+            </div>
+          </li>
+          <li>
+            <span class="help-img"></span>
+            <div class="help-font">
+              <h4>配送服务</h4>
+              <a href="#">配送范围及运费</a>
+              <a href="#">配送进度查询</a>
+              <a href="#">自提服务</a>
+              <a href="#">商品验货与签收</a>
+            </div>
+          </li>
+          <li>
+            <span class="help-img"></span>
+            <div class="help-font">
+              <h4>支付方式</h4>
+              <a href="#">货到付款</a>
+              <a href="#">在线支付</a>
+            </div>
+          </li>
+          <li>
+            <span class="help-img"></span>
+            <div class="help-font">
+              <h4>售后服务</h4>
+              <a href="#">退换货政策</a>
+              <a href="#">退换货流程</a>
+              <a href="#">退款说明</a>
+            </div>
+          </li>
+          <li>
+            <span class="help-img"></span>
+            <div class="help-font">
+              <h4>商家支持</h4>
+              <a href="#">商家入驻</a>
+              <a href="#">商家规则</a>
+              <a href="#">商家常见问题</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- footer-benefit -->
+      <div class="w footer-benefit">
+        <a href="#"><img src="../images/home/footer_01.jpg" /></a>
+        <a href="#"><img src="../images/home/footer_02.jpg" /></a>
+        <a href="#"><img src="../images/home/footer_03.jpg" /></a>
+      </div>
+      <!-- footer-bottom -->
+      <div class="w footer-bottom">
+        <a href="#">关于我们&nbsp;&nbsp;|</a>
+        <a href="#">&nbsp;&nbsp;联系我们&nbsp;&nbsp;|</a>
+        <a href="#">&nbsp;&nbsp;加盟合作&nbsp;&nbsp;|</a>
+        <a href="#">&nbsp;&nbsp;诚征英才&nbsp;&nbsp;|</a>
+        <a href="#">&nbsp;&nbsp;友情链接&nbsp;&nbsp;|</a>
+        <a href="#">&nbsp;&nbsp;新零售合作</a>
+        <p>
+          百联集团有限公司版权所有 | 客服电话：400-000-0000 | 沪ICP备00000000号
+        </p>
+        <p>互联网药品信息服务资质证书编号：沪-（非营业性）-200-0000</p>
+        <p>
+          医疗器械网络交易服务第三方平台备案凭证-（沪）网械平台备字[2020]第00002号
+        </p>
+        <p>全渠道增值电信业务经营许可证</p>
+        <img src="../images/home/gongan.png" />
+        <span>沪公网安备 31010102002366号</span>
+        <img src="../images/home/gongs.png" />
+        <span>上海工商</span>
+        <img src="../images/home/zhizhao.png" />
+        <span>经营执照</span>
+        <img src="../images/home/wanggou.png" />
+        <span>网购大家评</span>
+      </div>
+    </footer>
+
+
+    <script src="../assets/js/jquery-3.4.1.js"></script>
+    <script src="../assets/js/public.js"></script>
+    <script src="../assets/js/js-cookie.js"></script>
+    <script src="./cart.js"></script>
+  </body>
+</html>

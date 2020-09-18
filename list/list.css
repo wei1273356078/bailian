@@ -1,0 +1,141 @@
+/* banner */
+.banner>img {
+  width: 100%;
+  cursor: pointer;
+}
+
+
+
+
+
+/* main */
+.main {
+  margin-top: 25px;
+}
+.main>.main-top-image {}
+.main>.main-top-image>ul {
+  font-size: 0;
+  margin-right: -15px;
+}
+.main>.main-top-image>ul>li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 25%;
+  padding-right: 15px;
+}
+.main>.main-top-image>ul>li>a {
+  display: block;
+  width: 100%;
+}
+.main>.main-top-image>ul>li>a>img {
+  width: 100%;
+}
+
+
+/* main-product */
+.main-jingxuan,
+.main-fruit,
+.main-shuichan {
+  width: 100%;
+}
+.main-jingxuan>div,
+.main-fruit>div,
+.main-shuichan>div {
+  margin-top: 20px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  border-bottom: 2px solid #000;
+}
+.main-jingxuan>div>b,
+.main-fruit>div>b,
+.main-shuichan>div>b {
+  color: #00af90;
+}
+.main-jingxuan>div>a,
+.main-fruit>div>a,
+.main-shuichan>div>a {
+  color: #666;
+}
+.main-jingxuan>div>span {}
+.main-jingxuan>ul,
+.main-fruit>ul,
+.main-shuichan>ul {
+  font-size: 0;
+}
+.main-jingxuan>ul>li,
+.main-fruit>ul>li,
+.main-shuichan>ul>li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 33.333333%;
+  padding: 10px;
+}
+.main-jingxuan>ul>li>div>img,
+.main-fruit>ul>li>div>img,
+.main-shuichan>ul>li>div>img {
+  width: 158px;
+  cursor: pointer;
+}
+.main-jingxuan>ul>li>div,
+.main-fruit>ul>li>div,
+.main-shuichan>ul>li>div {
+  border: 1px solid transparent;
+  width: 100%;
+}
+.main-jingxuan>ul>li>div:hover,
+.main-fruit>ul>li>div:hover,
+.main-shuichan>ul>li>div:hover {
+  border: 1px solid #00af90;
+}
+.main-jingxuan>ul>li>div>div,
+.main-fruit>ul>li>div>div,
+.main-shuichan>ul>li>div>div {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+  width: 190px;
+}
+.main-jingxuan>ul>li>div>div>a,
+.main-fruit>ul>li>div>div>a,
+.main-shuichan>ul>li>div>div>a {
+  display: block;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #000;
+}
+.main-jingxuan>ul>li>div>div>a:hover,
+.main-fruit>ul>li>div>div>a:hover,
+.main-shuichan>ul>li>div>div>a:hover {
+  text-decoration: underline;
+}
+.main-jingxuan>ul>li>div>div>p,
+.main-fruit>ul>li>div>div>p,
+.main-shuichan>ul>li>div>div>p {
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 50px;
+  color: #999;
+}
+.main-jingxuan>ul>li>div>div>span,
+.main-fruit>ul>li>div>div>span,
+.main-shuichan>ul>li>div>div>span {
+  font-size: 20px;
+  color: #ff6f6f;
+}
+.main-jingxuan>ul>li>div>div>i,
+.main-fruit>ul>li>div>div>i,
+.main-shuichan>ul>li>div>div>i {
+  font-size: 25px;
+  margin-left: 80px;
+  cursor: pointer;
+  color: #ff6f6f;
+}
+
