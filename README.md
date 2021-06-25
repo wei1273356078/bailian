@@ -1,5 +1,6 @@
 # 这是一个PC端百联网上购物商城项目
 
+### 浏览地址：https://wei1273356078.github.io/bailian/home/
 
 
 使用的是**原生js**来实现的
